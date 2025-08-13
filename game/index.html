@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+       let number = Math.floor(Math.random()*100+1);
+       let count = 1;
+
+       console.log(number);
+
+       do{
+         let ourNumber=Number(prompt("Give a number 1-100"));
+
+         if(ourNumber > number){
+            alert(`Your number ${ourNumber} is grater than the guese number ${5 - count } left`);
+         }else if(ourNumber < number){
+              alert(`Your number ${ourNumber} is lower than the guese number ${5 - count } left`);
+         }else{
+             alert(`You Win the Game ${ count } attemted`);
+             break;
+         }
+    
+       if(count == 5){
+         alert(`Game Over`);
+          alert(`Try Again`);
+         break;
+       }
+         
+
+       count ++
+       }while(true)
+       
+
+
+    </script>
+</body>
+</html>

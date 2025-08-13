@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let result = Number(prompt("Give me Your Marks"));
+
+      if (result >= 80 && result <= 100 ) {
+        console.log("A+");
+         document.write(`<h1>Your Result is : A+ </h1>`);
+      } else if (result >= 70 && result < 80) {
+        console.log("A");
+         document.write(`<h1>Your Result is : A </h1>`);
+      } else if (result >= 60 && result < 70) {
+        console.log("A-");
+         document.write(`<h1>Your Result is : A- </h1>`);
+      } else if(result < 60 && result > -1) {
+        console.log("Fail");
+         document.write(`<h1>Your Result is : Fail </h1>`);
+      }else{
+         console.log("Give me the Valid Number");
+          document.write(`<h1>Invalid Number</h1>`);
+         
+      }
+
+     
+
+
+    </script>
+  </body>
+</html>

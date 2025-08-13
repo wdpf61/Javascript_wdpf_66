@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      
+
+<script>
+
+//   let numbers=  [5,6,-9,8,0,7,6,7,-5,-3,7,0];
+//    let sum= 0;
+//    let positiveNumber=0;
+//    numbers.forEach(function(n){
+//    sum+=n;
+   
+//    if(n > 0){
+//     positiveNumber ++
+//    }
+//    });
+
+
+//   document.write(`<h1>The sum of the Numbers is ${sum} </h1>`)
+//   document.write(`<h1> The count of positive number is ${positiveNumber} </h1>`)
+
+
+
+function MakeArray(){
+
+let numbers = [];
+do{
+let num= Number(prompt("Give me a Number"));
+numbers.push(num)
+
+if(num == 100){
+
+let arg= function (a , b){
+   return a -b;
+}
+
+ numbers.pop();
+
+ console.log(numbers.sort(arg).reverse());
+ break;
+}
+}while(true);
+
+
+
+
+}
+
+
+MakeArray()
+
+</script>
+</body>
+</html>

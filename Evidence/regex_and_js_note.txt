@@ -1,0 +1,111 @@
+
+=========================
+📘 Regular Expressions (Regex) in JavaScript
+=========================
+
+🔹 What is Regex?
+A Regular Expression (Regex) is a pattern used to match character combinations in strings.
+
+🔹 How to use in JavaScript?
+Use with `RegExp` object or with string methods like `match()`, `test()`, `replace()`, etc.
+
+✅ Syntax:
+    let pattern = /regex/flags;
+    let result = pattern.test("some text");
+
+=========================
+✨ Common Regex Symbols:
+=========================
+
+^       → Start of string
+$       → End of string
+.       → Any single character except newline
+*       → 0 or more repetitions
++       → 1 or more repetitions
+?       → 0 or 1 occurrence (optional)
+\d      → Digit (0-9)
+\D      → Non-digit
+\w      → Word character (a-zA-Z0-9_)
+\W      → Non-word character
+\s      → Whitespace
+\S      → Non-whitespace
+
+[abc]   → a, b, or c
+[^abc]  → Any character except a, b, or c
+{n}     → Exactly n times
+{n,}    → At least n times
+{n,m}   → Between n and m times
+
+=========================
+🔍 Special Expressions:
+=========================
+
+(?=...)     → Positive lookahead
+(?!...)     → Negative lookahead
+(?<=...)    → Positive lookbehind
+(?<!...)    → Negative lookbehind
+
+=========================
+📚 Common Validations with Regex:
+=========================
+
+✅ Email:
+    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+✅ Bangladeshi Phone:
+    /^01[3-9]\d{8}$/
+
+✅ Strong Password:
+    /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/
+
+✅ Only English Letters:
+    /^[a-zA-Z]+$/
+
+✅ Only Bangla Letters:
+    /^[\u0980-\u09FF]+$/
+
+✅ Number:
+    /^\d+$/
+
+✅ Decimal:
+    /^\d+(\.\d+)?$/
+
+✅ Date (YYYY-MM-DD):
+    /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/
+
+=========================
+💡 JavaScript Regex Usage Examples:
+=========================
+
+let pattern = /^[a-z]+$/;
+let input = "hello";
+
+if (pattern.test(input)) {
+    console.log("Valid!");
+} else {
+    console.log("Invalid!");
+}
+
+let email = "test@example.com";
+let emailRegex = /^[\w.-]+@[\w.-]+\.\w+$/;
+console.log(emailRegex.test(email)); // true
+
+let match = "My number is 01712345678".match(/01[3-9]\d{8}/);
+console.log(match[0]); // 01712345678
+
+=========================
+🧪 Tools for Practicing Regex:
+=========================
+
+🔗 https://regex101.com
+🔗 https://regexr.com
+🔗 https://www.debuggex.com
+
+=========================
+✅ Tips:
+=========================
+
+- Use `pattern.test(str)` to validate.
+- Always escape special characters (like `.` becomes `\.`).
+- Use anchors `^` and `$` to match full strings.
+

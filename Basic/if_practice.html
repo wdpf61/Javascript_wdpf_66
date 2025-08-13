@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+    // //1. positive nagative
+    // let number1= Number(prompt("Give me a number1"));
+    // let number2= Number(prompt("Give me a number2"));
+
+
+    // if (number1 > 0) {
+    //     document.write(`<h1>${number1} is the positive Number</h1>`);   
+    // }else if(number1 <0){
+    //       document.write(`<h1>${number1} is the Nagative Number</h1>`);   
+    // }
+
+    // 2. even or odd
+     // let number1= Number(prompt("Give me a number1"));
+    //  if( number1 % 2 == 0 ){
+    //     console.log( `${number1} is an even number`); 
+    //      document.write(`<h1>${number1} is an even number</h1>`);   
+    //  }else{
+    //      document.write(`<h1>${number1} is the odd Number</h1>`);   
+    //      console.log( `${number1} is an odd number`); 
+    //  };
+     
+    // 3. largest and smallest number
+    // let number1= Number(prompt("Give me a number1"));
+    // let number2= Number(prompt("Give me a number2"));
+
+    // if (number1 > number2) {
+    //      document.write(`<h1>${number1} is Grater than ${number2}</h1>`); 
+    // }else{
+    //      document.write(`<h1>${number2} is Grater than ${number1}</h1>`); 
+    // }
+
+    // 4. divisible by 3 and 5
+    // let number1= Number(prompt("Give me a number1"));
+ 
+    // if (number1 % 3 == 0  &&  number1 % 5 == 0) {
+    //      document.write(`<h1>${number1} is divisible by 3 and 5</h1>`); 
+    // }else{
+    //       document.write(`<h1>${number1} is not divisible by 3 and 5</h1>`); 
+    // }
+
+    // 5.	Assign default name using ternary
+
+    // let name = prompt("Give me your name");
+
+    let name = "Hasan";
+    let xyz =  name == "" ? "Guest" : name;
+    document.write(`<h1>Hello ${xyz}</h1>`);
+
+    let has_car= false;
+
+    console.log( has_car ? "You can drive " : "You have to buy a car");
+
+    if (has_car) {
+      console.log("You can drive ");
+    }else{
+        console.log("You have to buy a car");
+    }
+     
+     
+
+    
+    
+
+    
+    // 6.Display "Adult" 18 - 35  or "Child" 0-18  or “Middle aged” 35- 60 
+    // let age=  Number(prompt("Give your age"));
+    // if (age < 18 && age > 0) {
+    //     document.write(`<h1>He is a child and his age is ${age}</h1>`);
+    // }else if(age >= 18 && age < 35){
+    //    document.write(`<h1>He is a adult and his age is ${age}</h1>`);
+    // }else if(age >= 35 ){
+    //      document.write(`<h1>He is a Middle aged person and his age is ${age}</h1>`);
+    // }
+
+    // 7. Display "Is_Login”
+
+    // let is_login= 1;
+    // let is_login= confirm("Do you want to login !!");
+
+    // if (is_login) {
+    //      document.write(`<h1>Welcome</h1>`);
+    // }else{
+    //      document.write(`<h1>You are not login</h1>`);
+    // }
+
+    //  let has_license= true;
+    //  let car = true;
+
+
+    //  if (has_license && car) {
+    //      document.write(`<h1>You Can Drive the Car</h1>`);
+    //  }else{
+    //       document.write(`<h1>You Can not Drive the Car</h1>`);
+    //  }
+
+    
+  let mark = 80;
+  switch(true){
+     case mark >= 80:
+        console.log("A+");
+      break;
+    case mark  >=70:
+        console.log("A");
+      break;
+    case mark  >=60:
+        console.log("A-");
+      break;
+      default:
+          console.log("Fail");
+      break;   
+  }
+     
+
+  let a= 20;
+  let b=100;
+  let c=5;
+
+  `this number value is ${a}` 
+
+  if(a > b){
+     if(a > c) {
+        console.log(`${a} is the largest number among ${a},${b},${c}`);  
+     }else{
+          console.log(`${c} is the largest number among ${a},${b},${c}`);  
+     } 
+  }else if(b > a ){
+       if(b > c){
+         console.log(`${b} is the largest number among ${a},${b},${c}`);  
+       }else{
+          console.log(`${c} is the largest number among ${a},${b},${c}`);  
+       }
+  }
+
+
+  let hasCar= true;
+  let friends_car= true;
+  let drivingLince=true;
+
+  
+  if (hasCar) {
+     console.log("You can drive the car");
+  }
+
+
+  if (hasCar) {
+     console.log("You can drive the car");
+  }else{
+     console.log("You can not drive the car");
+  }
+    
+  if (hasCar) {
+     console.log("You can drive the car");
+  }else if(friends_car){
+     console.log("You can drive the car");
+  }else{
+     console.log("You can not drive the car");
+  }
+    
+
+
+
+    </script>
+</body>
+</html>

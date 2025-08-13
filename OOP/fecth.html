@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="ToDoList">
+    </ul>
+    <script>
+
+        //  let ul= document.getElementById("ToDoList");
+        //  fetch("https://dummyjson.com/todos")
+        //  .then(res => res.json())
+        //  .then(data =>{
+        //     console.log(data.todos);
+        //    let html="";
+
+        //    data.todos.forEach((t)=>{
+        //      html += `<li>${t.todo}</li>`;
+        //    });
+        //    ul.innerHTML= html; 
+        //  })
+        //  .catch(error => console.log(error))
+
+
+          async function getData(){
+             try {
+               const res= await fetch("https://dummyjson.com/todos"); 
+                let data =  await res.json();
+                console.log(data);
+             } catch (error) {
+                 console.log(error);
+             }
+          }
+//           async function getData(){
+//              try {
+//                const res= await fetch("https://dummyjson.com/todos", {
+//                  method:"GET",
+//                  headers:{
+//                      'Content-Type': 'application/json'
+//                  },
+//                 //  body:JSON.stringify({ name: 'Alice', age: 30 })
+                 
+//                }); 
+//                 let data =  await res.json();
+//                 console.log(data);
+//              } catch (error) {
+//                  console.log(error);
+//              }
+//           }
+          
+//           getData()
+
+
+          let abc=["a", "b", "c", "c"] 
+
+          let unique= new Set(abc)
+          unique.add("e")
+          console.log(unique);
+
+
+          let map= new Map();
+          map.set("Name", "Hasan")
+          console.log(map);
+          
+          
+
+
+
+// const mySet = new Set();
+// mySet.add(10);
+// mySet.add(20);
+// mySet.add(10); // Duplicate, ignored
+
+
+// //Check if value exists:
+// console.log(mySet.has(10)); // true
+
+// // Delete a value:
+// mySet.delete(20);
+
+// // Size of Set:
+// console.log(mySet.size); // 1
+
+// // Loop through Set:
+// for (let value of mySet) {
+//   console.log(value);
+// }
+
+// // Clear Set:
+// mySet.clear();
+
+
+
+
+// // Create a Map:
+// const myMap = new Map();
+
+// // Set key-value pairs:
+// myMap.set("name", "Pizza");
+// myMap.set("price", 12.99);
+// myMap.set("available", true);
+
+// // Get value by key:
+// console.log(myMap.get("name")); // Pizza
+
+// // Check if key exists:
+// console.log(myMap.has("price")); // true
+
+// // Delete a key:
+// myMap.delete("available");
+
+// // Size of Map:
+// console.log(myMap.size); // 2
+
+// // Loop through Map:
+for (let [key, value] of myMap) {
+  console.log(key + ": " + value);
+}
+
+// // Clear Map:
+// myMap.clear();
+
+    </script>
+</body>
+</html>

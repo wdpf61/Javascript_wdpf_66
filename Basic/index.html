@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+
+</head>
+<body>
+ 
+
+    <script>
+    // document.write("<a href='https://bmu.ac.bd/'>PG Hopital</a>");
+    // alert("The site may have malware");
+    // console.log("IsDB Bisew");
+    // confirm("Are You sure ?");
+    // let phoneNumber=  prompt("Give your phone number");
+
+
+    //  console.log(phoneNumber);
+    // console.log(window);
+
+    //  let x = 5;
+    //  let y=10;
+    //  let z = x+y;
+    //  alert(z);
+
+
+
+    //  let number1 = 100;
+    //  let number2 = 50;
+
+    //  let number3= number1 - number2;
+    //  console.log(number3);
+
+    // //  template literal
+    //  document.write(`<h1>${number3}</h1>`);
+
+    // //   string literal
+    //  document.write("<h1>"+number3+"</h1>");
+
+
+    //  let fname = prompt("Give me your First Name");
+    //  let lname = prompt("Give me your Last Name");
+    //  document.write(`Welcome Mr. ${fname} ${lname} !`);
+
+    //  diclaration of vairable 
+    // let,var,const 
+
+
+    //  premitive data 
+    // 
+
+    // camel case 
+    // snake case  ismale
+    // pascle case IsMale
+
+// The general rules for constructing names for variables (unique identifiers) are:
+
+// Names can contain letters, digits, underscores, and dollar signs.
+// Names must begin with a letter.
+// Names can also begin with $ and _ (but we will not use it in this tutorial).
+// Names are case sensitive (y and Y are different variables).
+// Reserved words (like JavaScript keywords) cannot be used as names.
+
+    let x = 100;  
+    var name = "Mehedi Hasan";
+    let isMale= true;
+    let car = null;
+    let bus = undefined;
+
+
+    var stu1="Mehedi"; 
+    var stu2="Muzzamil"; 
+    var stu3="Saima";
+
+    // non premitive data
+  
+    var batch66= ["Mehedi", "Muzzammil", "Sayma", "Tithi", "Sordar", "Harun or Rashid"];
+   
+     var marks= {Bangla:85, English: 95, Math:90};
+
+    console.log(batch66);
+    console.log(batch66[4]);    // index number starts 0   length 1 
+  
+    var wdpf_student={
+            id:1,
+            name:"Khaled",
+            age:24,
+            address:"Dhaka",
+            phone:"01761747489",
+            subject:"WDPF",
+            gender:0
+        }
+    var wdpf_students=[
+        {
+            id:1,
+            name:"Khaled",
+            age:24,
+            address:"Dhaka",
+            phone:"01761747489",
+            subject:"WDPF",
+            gender:0
+        },
+        {
+            id:2,
+            name:"Mahmud",
+            age:24,
+            address:"Dhaka",
+            phone:"01761747489",
+            subject:"WDPF",
+            gender:0
+        },
+        {
+            id:3,
+            name:"Fatema",
+            age:24,
+            address:"Dhaka",
+            phone:"01761747489666666",
+            subject:"WDPF",
+            gender:1
+        }
+]
+
+console.log(wdpf_students[2].phone);
+
+
+let marks1=[
+    ['jamal', 100, 98, 100],
+    ['Habib', 85, 94, 100],
+    ['Kalam', 48, 98, 50],
+]
+
+console.log(marks1[1][2]);
+
+
+// console.log(wdpf_student.gender); 
+
+
+
+ 
+
+
+//  string 
+//  number 
+// boolian
+// null 
+// undefined 
+
+
+
+// array 
+// object 
+
+// array of object 
+// array of array
+
+   
+
+//   operators
+
+let a = 10;
+let b= 3;
+
+// 1.Arithmatic operator
+  
+let c = a+b;
+let d = a-b;
+let e = a/b;
+let f = a*b;
+let g= a % b    //modulus 
+
+let h= a**b    
+
+console.log(c,d,e,f,g, h);
+
+
+ let i = 5;
+    //  i += 10; 
+    //  i = i+ 10
+    //  i -= 10;
+
+        i *= 10;
+
+        // console.log(i);
+
+
+// Comparison Operators
+
+let j = 20;
+let k =30;
+
+
+console.log(j == k );
+
+console.log(j != k );
+console.log(j !== k );
+console.log( k > j );
+console.log( k < j );
+console.log( k >= j );
+
+
+let m=5
+let n="5"
+
+// console.log(m !== n );
+
+
+let o=5
+let p=10
+
+console.log( !(o < 4) );
+
+let student= 80;
+
+// ternary operator
+console.log(student >= 70 ? "Pass" : "Fail");
+
+if(student >= 70){
+  console.log("Get the license");
+}else{
+ console.log("does not Get the license");
+}
+
+
+
+// string operator
+
+let first_name= "Pollob"
+let last_name= "Ahmed"
+
+console.log(first_name+ " "+ last_name);
+
+let fullName = `${first_name} ${last_name}`;
+
+console.log(fullName);
+console.log(first_name ?? "Harun Shaheb");
+
+
+let driver ={
+     name :"Khaja Naimuddin",
+     age:35, 
+  
+     phone:"019966644655",
+     family:['Father', "Mother", "Wife", "son"]
+}
+ console.log(driver?.address?.Division);
+
+//   if(driver?.address?.Division){
+//      console.log(driver?.address?.Division);
+//   }else{
+//      console.log(driver?.family[3]);
+//   }
+
+
+// Resutl sheet 
+// 80 >= "A+" , 70 >= "A" , 60 >= "A-", 50 >= B , Fail
+
+let result = 75;
+
+if(result >= 80){
+    console.log("A+")
+}else if(result >= 70){
+   console.log("A")
+}else if(result >= 60){
+    console.log("A-");   
+}else{
+    console.log("Fail")
+}
+
+ 
+let age =13;
+
+if(age >= 18){
+    console.log("You will get the license");
+}else {
+     console.log(`you have to wait ${18 - age} years`);   
+}
+
+
+let exam_result="100.45";
+
+// exam_result= parseInt(exam_result);
+// exam_result= parseFloat(exam_result);
+exam_result= Number(exam_result);
+
+console.log(typeof exam_result);
+console.log(exam_result);
+
+let num1=200
+
+num1= String(num1)
+console.log(typeof num1);
+console.log(num1);
+
+console.log(Number(false));
+console.log(Boolean(1));
+
+console.log(Boolean(""));
+console.log(Boolean("Hasib"));
+
+let checkTrue= String(true);
+console.log(typeof checkTrue);
+let s=null;
+console.log(Number(s));
+
+
+
+
+    </script>
+</body>
+</html>
