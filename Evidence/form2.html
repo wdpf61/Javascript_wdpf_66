@@ -13,12 +13,19 @@
         display: none;
       }
     </style>
+
+     <script>
+
+       let fomvalidation= new FormValidation("data");
+
+     </script>
+
   </head>
   <body>
-    <form action="" id="f" name="f" >
+    <form action="" id="f" name="f"  style="width: 400px; margin: 0 auto;" >
       <div>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name" onblur="FormValidation.nameValidation()" />
         <div class="namevalidation">Please provide a valid name</div>
       </div>
       <div>
@@ -70,18 +77,62 @@
         <textarea id="comment" name="comment"></textarea>
       </div>
       <div>
-        <input type="submit" />
+        <input type="submit"  onclick="FormValidation.formSubmit()"/>
       </div>
     </form>
 
    
 
     <script>
-         let form= document.getElementById("f");
+        //  let form= document.getElementById("f");
 
-         form.addEventListener("submit", function(e){
-          e.preventDefault();
-          // alert();
+        //  form.addEventListener("submit", function(e){
+        //   e.preventDefault();
+        //   // alert();
+
+        //   let name = form.name.value;
+        //   let email = form.email.value;
+        //   let city = form.city.value;
+        //   let gender = form.gender.value;
+        //   let comment = form.comment.value;
+        //   let subjects = form.subject;
+        //   let Selectedsubjects = "";
+
+
+        //   subjects.forEach(sub=>{
+        //       if(sub.checked){
+        //       Selectedsubjects +=sub.value;
+        //       }
+        //   });
+        
+          
+        //   let w = open("", "_blank", "width=500,height=400");
+        //   w.document.write(`<h4>Name:${name}</h4>`);
+        //   w.document.write(`<p>Email:${email}</p>`);
+        //   w.document.write(`<p>City:${city}</p>`);
+        //   w.document.write(`<p>Gender:${gender}</p>`);
+        //   w.document.write(`<p>Subject:${Selectedsubjects}</p>`);
+        //   w.document.write(`<p>Commment:${comment}</p>`);
+        //   w.document.write(`<button onclick="self.close()">close</button>`);
+        //   w.document.write(`<button onclick="print()">Print</button>`);
+           
+        
+        // });
+
+
+
+     
+         
+          
+       class FormValidation{
+
+           constructor(data){
+              this.data= data;
+           }
+        
+        static formSubmit(){
+
+          let form= document.getElementById("f");
 
           let name = form.name.value;
           let email = form.email.value;
@@ -109,10 +160,31 @@
           w.document.write(`<button onclick="self.close()">close</button>`);
           w.document.write(`<button onclick="print()">Print</button>`);
            
-        
-        });
-         
-          
+        }
+
+
+
+
+         static nameValidation(){
+            let name = document.getElementById("name").value;
+            let p= /^[a-zA-Z .]{3,}$/;
+            if(p.test(name)){
+              document.getElementById("name").style.border = "1px solid green";
+               document.getElementsByClassName("namevalidation")[0].style.display =
+             "none";
+            }else{
+              document.getElementsByClassName("namevalidation")[0].style.display =
+            "block";
+               document.getElementById("name").style.border = "1px solid red";
+            }
+
+
+
+        }
+
+
+       }
+
 
     </script>
   </body>
