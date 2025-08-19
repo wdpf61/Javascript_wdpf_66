@@ -1,4 +1,6 @@
 class FormValidation {
+
+  
   static formSubmit() {
     let form = document.getElementById("f");
     form.addEventListener("submit", function (e) {
